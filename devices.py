@@ -20,9 +20,8 @@ def hottest(devices):
 def to_status(device):
     return {
         "name": device["name"],
-        "room": device["room"],
-        "temp": device["temp"],
-        "online": device["online"]
+        "status": "ok" if device["online"] else "offline",
+        "celsius": device["temp"],
     }
 
 def by_room(devices):
