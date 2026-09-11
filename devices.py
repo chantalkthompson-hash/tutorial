@@ -32,3 +32,13 @@ def by_room(devices):
             room_dict[room] = []
         room_dict[room].append(device["name"])
     return room_dict
+
+list_devices(readings)
+
+print(average_temp(readings))
+
+print(hottest(readings))
+
+print(to_status(readings[4]))
+
+print(by_room(readings))
