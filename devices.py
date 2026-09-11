@@ -25,3 +25,11 @@ def to_status(device):
         "online": device["online"]
     }
 
+def by_room(devices):
+    room_dict = {}
+    for device in devices:
+        room = device["room"]
+        if room not in room_dict:
+            room_dict[room] = []
+        room_dict[room].append(device["name"])
+    return room_dict
