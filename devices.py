@@ -17,3 +17,11 @@ def average_temp(devices):
 def hottest(devices):
     return max(devices, key=lambda device: device['temp']) if devices else None
 
+def to_status(device):
+    return {
+        "name": device["name"],
+        "room": device["room"],
+        "temp": device["temp"],
+        "online": device["online"]
+    }
+
