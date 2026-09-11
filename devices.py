@@ -14,3 +14,6 @@ def average_temp(devices):
     total_temp = sum(device['temp'] for device in devices)
     return total_temp / len(devices) if devices else 0
 
+def hottest(devices):
+    return max(devices, key=lambda device: device['temp']) if devices else None
+
